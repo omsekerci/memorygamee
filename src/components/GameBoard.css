@@ -1,0 +1,113 @@
+/* src/components/GameBoard.css */
+
+.game-board {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* KONTROLLER İÇİN DÜZENLENMİŞ KISIM */
+.game-controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Bu özellik, dikey hizalamayı sağlar. */
+    gap: 10px;
+}
+
+.game-controls label {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5; /* Metin ve seçicinin aynı hizada olmasını garanti eder */
+}
+
+.game-controls select {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff007f;
+    color: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M287%20197.8L154.5%2065.3c-2.3-2.3-5.3-3.5-8.5-3.5s-6.2%201.2-8.5%203.5L5.4%20197.8c-4.6%204.6-4.6%2012%200%2016.6l16.7%2016.7c4.6%204.6%2012%204.6%2016.6%200l110.8-110.8%20110.8%20110.8c4.6%204.6%2012%204.6%2016.6%200l16.7-16.7c4.6-4.6%204.6-12%200-16.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px auto;
+    padding-right: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.game-controls select:hover {
+    background-color: #d6006f;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.game-board button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff007f;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.game-board button:hover {
+    background-color: #d6006f;
+}
+
+.game-finished-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.game-finished-modal h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.game-finished-modal p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.game-finished-modal button {
+    margin-top: 20px;
+}
